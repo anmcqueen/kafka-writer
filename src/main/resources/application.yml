@@ -1,0 +1,15 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: kafka-writer
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      client-id: kafka-writer-producer-v1
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+app:
+  kafka:
+    topic:
+      name: weather-data-topic
